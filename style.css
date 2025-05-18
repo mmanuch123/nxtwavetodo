@@ -1,0 +1,266 @@
+.heading-title {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #337ab7;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Input Section */
+.input-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.input-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.8em;
+}
+
+.input-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    padding: 12px 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #286090;
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.filter-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.8em;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.filter-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Task List Section */
+.task-list-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.8em;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#taskList li.completed {
+    background-color: #e6ffe6;
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-details {
+    flex-grow: 1;
+}
+
+.task-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.priority-tag {
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.priority-tag.High {
+    background-color: #ffdddd;
+    color: #ff0000;
+}
+
+.priority-tag.Medium {
+    background-color: #fffacd;
+    color: #dda0dd;
+}
+
+.priority-tag.Low {
+    background-color: #e0ffff;
+    color: #00ced1;
+}
+
+.overdue {
+    color: red;
+    font-weight: bold;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.task-actions button:hover {
+    color: #333;
+}
+
+.task-actions input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.edit-actions button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-actions .save {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+}
+
+.edit-actions .cancel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
